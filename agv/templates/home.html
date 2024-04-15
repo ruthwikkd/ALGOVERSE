@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto mt-8 min-h-screen">
+      <form action="/" method="post" class="flex flex-col items-center">
+        <input type="text" name="name" placeholder="Your Name" class="mt-2 px-4 py-2 rounded w-full max-w-md" required>
+        <input type="text" name="course" placeholder="Course of Study" class="mt-2 px-4 py-2 rounded w-full max-w-md" required>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Submit</button>
+      </form>
+    </div>
+   {% include 'partials/_footer.html' %}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Detection - AlgoVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto mt-8">
+      <h1 class="text-xl font-bold text-center">Let's Learn About How Sign Language Detection Works</h1>
+      <p class="text-center mt-4">Sign language detection is a fascinating application of computer vision and machine learning technologies. By leveraging tools like MediaPipe and TensorFlow, developers can create systems that interpret sign language in real-time, making communication more accessible for the deaf and hard-of-hearing community. These technologies use complex algorithms to process video input, detect hand gestures, and translate them into spoken language or text Mediapipe: This is an open-source framework developed by Google that offers ready-to-use yet customizable pipelines for various perception tasks, including hand tracking, pose estimation, face detection, and more. In the context of sign language detection, the hand tracking module of Mediapipe can be particularly useful. It provides robust hand detection and tracking capabilities, allowing developers to efficiently locate and track hand movements in real-time.
+
+        TensorFlow: TensorFlow is an open-source machine learning framework developed by Google Brain. It provides tools and libraries for building and deploying machine learning models, including deep learning models, which are especially effective for tasks like image recognition and sequence modeling. TensorFlow allows developers to construct neural networks and train them on large datasets to recognize patterns and make predictions.
+        
+        </p>
+      <div class="mt-4 text-center">
+        <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to Home</a>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="/try-motion-detection" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Let's Try It</a>
+      </div>
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>

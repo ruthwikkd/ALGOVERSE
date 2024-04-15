@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results - AlgoVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto mt-8">
+      <h1 class="text-xl font-bold text-center">Quiz Results</h1>
+      <p class="text-center mt-4">You answered {{ correct_answers }} out of {{ total_questions }} questions correctly!</p>
+      <div class="mt-4 text-center">
+        <a href="/quiz" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Retake Quiz</a>
+      </div>
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>

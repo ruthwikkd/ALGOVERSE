@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz on Sorting Algorithms</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto mt-8">
+      <h1 class="text-xl font-bold text-center">Quiz on Sorting Algorithms</h1>
+      <form action="/submit-quiz" method="post" class="mt-8">
+        {% for question, options, correct_answer in quiz_questions %}
+        <div class="mb-4">
+          <p class="text-lg font-semibold">{{ loop.index }}. {{ question }}</p>
+          {% for option in options %}
+          <label class="block">
+            <input type="radio" name="question{{ loop.index0 }}" value="{{ option }}" class="mr-2">
+            {{ option }}
+          </label>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+      </form>
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Us - AlgoVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto mt-8">
+      <h1 class="text-xl font-bold text-center">Ask Us Anything</h1>
+      <form id="askForm" class="text-center mt-4">
+        <textarea id="userQuestion" rows="4" class="block w-1/2 mx-auto p-2 rounded" placeholder="What do you want to ask us?" required></textarea>
+        <button type="button" onclick="submitQuestion()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Ask</button>
+      </form>
+      <div class="mt-4 text-center">
+        <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to Home</a>
+      </div>
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+  <script>
+    function submitQuestion() {
+      const userQuestion = document.getElementById('userQuestion').value;
+      if(userQuestion) {
+        document.getElementById('askForm').reset();
+        document.getElementById('askForm').innerHTML = '<p>Your ask has been successfully sent.</p>';
+      }
+    }
+  </script>
+</html>
